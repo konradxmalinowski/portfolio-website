@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="portfolio Konrad Malinowski" />
+    <meta
+      name="keywords"
+      content="portfolio, cv, job, web-dev, web developer"
+    />
+    <script src="app.js" defer></script>
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="https://www.portfolio-website.ct8.pl" class="domain-name bold"
+        >portfolio-website.ct8.pl</a
+      >
+
+      <section id="anchors">
+        <nav class="anchors-left basicFlex">
+          <a
+            href="https://www.portfolio-website.ct8.pl"
+            target="_blank"
+            class="bold"
+            >portfolio-website.ct8.pl</a
+          >
+        </nav>
+        <nav class="anchors-right basicFlex">
+          <a href="#top">About</a>
+          <a href="#web-apps">Projects</a>
+          <a href="#skills">Skills</a>
+        </nav>
+      </section>
+    </header>
+
+    <button class="navbar-button">
+      <img
+        src="images/menu-bar-icon.png"
+        alt="menu-bar-icon"
+        class="menu-bar-icon"
+        class="menu-bar-icon"
+      />
+    </button>
+    <nav class="navbar">
+      <a href="#top">About</a>
+      <a href="#web-apps">Projects</a>
+      <a href="#skills">Skills</a>
+    </nav>
+
+    <section class="hero-section">
+      <section id="author">
+        <section id="autor-wrapper">
+          <section class="author-img" id="author-img2">
+            <img src="images/pfp.jpg" alt="pfp" class="pfp" loading="lazy" />
+            <section id="socials">
+              <button>
+                <a href="https://github.com/konradxmalinowski" target="_blank">
+                  <img
+                    src="images/github-icon2.png"
+                    alt="fb"
+                    id="github-icon"
+                    loading="lazy"
+                  />
+                </a>
+              </button>
+              <button>
+                <a
+                  href="https://www.linkedin.com/in/konrad-malinowski-894a36323"
+                  target="_blank"
+                >
+                  <img src="images/linkedin.png" alt="li" loading="lazy" />
+                </a>
+              </button>
+            </section>
+          </section>
+          <div id="text-wrapper">
+            <p class="bold">
+              Hi, my name is
+              <span class="green">Konrad Malinowski</span>
+            </p>
+            <p>
+              I am a <span class="bold">web developer</span> with experience in
+              creating frontend and backend applications.
+            </p>
+            <p>
+              I work with technologies such as <span class="bold">HTML</span>,
+              <span class="bold">CSS</span>, and
+              <span class="bold">JavaScript</span>, using the Framework -
+              <span class="bold">React</span>. I also deal with managing servers
+              and databases, which allows me to comprehensively support the
+              implemented projects.
+            </p>
+            <p>
+              I am passionate about building intuitive and visually appealing
+              web applications. When I'm not coding, I enjoy exploring new
+              technologies and
+              <span class="underlined">keeping up-to-date</span> with the latest
+              trends in web development.
+            </p>
+          </div>
+
+          <section class="author-img" id="author-img">
+            <img src="images/pfp.jpg" alt="pfp" class="pfp" loading="lazy" />
+            <section id="socials">
+              <button>
+                <a href="https://github.com/konradxmalinowski" target="_blank">
+                  <img src="images/github-icon2.png" alt="fb" loading="lazy" />
+                </a>
+              </button>
+              <button>
+                <a
+                  href="https://www.linkedin.com/in/konrad-malinowski-894a36323"
+                  target="_blank"
+                >
+                  <img src="images/linkedin.png" alt="li" loading="lazy" />
+                </a>
+              </button>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+
+    <div class="main-wrapper">
+      <span id="web-apps"></span>
+      <main>
+        <h1>Let's check out <span class="bold green">my projects</span></h1>
+        <p>All other interesting projects can be found on my github!</p>
+        <section id="projects-content">
+          <section class="card">
+            <h3>Text statistics</h3>
+            <p>
+              A tool for analyzing text, providing statistics like character,
+              word, and sentence counts. The design is simple, responsive, and
+              user-friendly.
+            </p>
+            <section class="card__items">
+              <button class="card__button">
+                <a
+                  href="https://portfolio-website.ct8.pl/websites/text-statistics"
+                  target="_blank"
+                  >Show</a
+                >
+              </button>
+              <button
+                onclick="copyToClipboard('https://portfolio-website.ct8.pl/websites/text-statistics')"
+                class="card__button"
+              >
+                Copy
+              </button>
+            </section>
+          </section>
+
+          <section class="card">
+            <h3>Converter</h3>
+            <p>
+              This is a versatile unit converter web app that supports
+              conversions across various measurement categories. It features a
+              straightforward interface, making it easy to quickly convert units
+              with accuracy.
+            </p>
+            <section class="card__items">
+              <button class="card__button">
+                <a
+                  href="https://portfolio-website.ct8.pl/websites/converter"
+                  target="_blank"
+                  >Show</a
+                >
+              </button>
+
+              <button
+                onclick="copyToClipboard('https://portfolio-website.ct8.pl/websites/converter')"
+                class="card__button"
+              >
+                Copy
+              </button>
+            </section>
+          </section>
+
+          <section class="card">
+            <h3>Exam test</h3>
+            <p>
+              An exam test for the INF.03 certification, focused on JavaScript,
+              jQuery, and React. It features an interactive interface with
+              automatic scoring and responsive design.
+            </p>
+            <section class="card__items">
+              <button class="card__button">
+                <a
+                  href="https://portfolio-website.ct8.pl/websites/exam-test/"
+                  target="_blank"
+                  >Show</a
+                >
+              </button>
+
+              <button
+                onclick="copyToClipboard('https://portfolio-website.ct8.pl/websites/exam-test/')"
+                class="card__button"
+              >
+                Copy
+              </button>
+            </section>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <section class="skills-wrapper">
+      <section id="skills"></section>
+      <h1>My Skills</h1>
+      <article id="skills-article">
+        <section id="skills-content">
+          <section class="language">
+            <h3>HTML</h3>
+            <img
+              src="images/html-icon.png"
+              alt="html-icon"
+              loading="lazy"
+              id="html-img"
+            />
+            <span>Experienced</span>
+          </section>
+          <section class="language">
+            <h3>CSS</h3>
+            <img
+              src="images/css-icon.png"
+              alt="css-icon"
+              loading="lazy"
+              id="css-img"
+            />
+            <span>Experienced</span>
+          </section>
+          <section class="language">
+            <h3>JavaScript</h3>
+            <img
+              src="images/javascript-icon.png"
+              alt="javascript-icon"
+              id="js-img"
+              loading="lazy"
+            />
+            <span>Experienced</span>
+          </section>
+          <section class="language">
+            <h3>React</h3>
+            <img
+              src="images/react-icon.png"
+              alt="react-icon"
+              loading="lazy"
+              id="react-img"
+            />
+            <span>Basic</span>
+          </section>
+          <section class="language">
+            <h3>Wordpress</h3>
+            <img
+              src="images/wordpress-icon.png"
+              alt="wordpress-icon"
+              loading="lazy"
+              id="wordpress-img"
+            />
+            <span>Experienced</span>
+          </section>
+          <section class="language">
+            <h3>SQL</h3>
+            <img
+              src="images/sql-icon.png"
+              alt="sql-icon"
+              id="sql-img"
+              loading="lazy"
+            />
+            <span>Basic</span>
+          </section>
+          <section class="language">
+            <h3>MySQL</h3>
+            <img
+              src="images/mysql-icon.png"
+              alt="mysql-icon"
+              loading="lazy"
+              id="mysql-img"
+            />
+            <span>Basic</span>
+          </section>
+          <section class="language">
+            <h3>Python</h3>
+            <img
+              src="images/python-icon.png"
+              alt="python-icon"
+              id="python-img"
+              loading="lazy"
+            />
+            <span>Basic</span>
+          </section>
+          <section class="language">
+            <h3>C#</h3>
+            <img
+              src="images/c-hasz-icon.png"
+              alt="c#-icon"
+              id="c-hasz-img"
+              loading="lazy"
+            />
+            <span>Basic</span>
+          </section>
+          <section class="language">
+            <h3>Git</h3>
+            <img
+              src="images/git-icon.png"
+              alt="git-icon"
+              loading="lazy"
+              id="git-img"
+            />
+            <span>Basic</span>
+          </section>
+        </section>
+      </article>
+    </section>
+
+    <section class="ratings-wrapper">
+      <section class="rating-section">
+        <h1>Do you want to rate this website?</h1>
+        <p>
+          I invite you to click the button below and rate my work in creating
+          this website.
+        </p>
+        <button>
+          <a href="mailto:konradmalinowski@zsezdw.onmicrosoft.com"
+            >Rate website</a
+          >
+        </button>
+      </section>
+    </section>
+
+    <footer class="basicFlex">
+      <section class="footer-wrapper lwrapper">
+        <a href="https://github.com/konradxmalinowski" target="_blank">
+          <img
+            src="images/github-icon2.png"
+            alt="github-icon"
+            loading="lazy"
+            id="github-img"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/konrad-malinowski-894a36323"
+          target="_blank"
+        >
+          <img
+            src="images/linkedin.png"
+            alt="linkedin-icon"
+            loading="lazy"
+            id="linkedin-img"
+          />
+        </a>
+        <a href="https://www.instagram.com/konradxmalinowski/" target="_blank">
+          <img
+            src="images/ig-icon.png"
+            alt="ig-icon"
+            id="ig-img"
+            loading="lazy"
+          />
+        </a>
+        <a href="https://www.facebook.com/konradxmalinowski" target="_blank">
+          <img
+            src="images/fb-icon.png"
+            alt="fb-icon"
+            id="fb-img"
+            loading="lazy"
+          />
+        </a>
+      </section>
+
+      <section class="footer-wrapper rwrapper">
+        <a href="Terms of Use.pdf" download target="_blank">Terms of Use</a>
+        <a href="">Privacy Policy</a>
+        <p>Konrad Malinowski &copy;<span class="date"></span></p>
+      </section>
+    </footer>
+  </body>
+</html>
