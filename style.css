@@ -202,6 +202,7 @@ header .domain-name {
   padding: 20px;
   background: linear-gradient(0deg, var(--clr-secondary-300), var(--clr-secondary-400));
   opacity: 0;
+  display: none;
   transition: opacity .7s ease-in-out 0s;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -212,6 +213,7 @@ header .domain-name {
 .showed-hidden-navbar {
   opacity: 1;
   transition: opacity .7s ease-in-out 0s;
+  display: flex;
 }
 
 
