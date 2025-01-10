@@ -3,12 +3,35 @@ const navbar = document.querySelector('.navbar');
 const navbarButton = document.querySelector('.navbar-button');
 
 function toggleClass() {
-  navbar.classList.toggle('showed-hidden-navbar');
+  setTimeout(() => {
+    navbar.classList.toggle('showed-hidden-navbar');
+  }, 0);
+
+  let isClass;
+
+  setTimeout(() => {
+    isClass = (navbar.classList.contains('showed-hidden-navbar')) ? true : false;
+  }, 0)
+
+  if (isClass) {
+    setTimeout(() => {
+      navbar.style.visibility = 'hidden'
+    }, 700);
+  }
+
 }
 navbarButton.onclick = toggleClass;
 navbarButton.onblur = toggleClass;
 
 
+// author animation
+const pTag = document.querySelector('#text-wrapper>p:nth-child(1)');
+
+if (parseInt(window.getComputedStyle(document.body).width.slice(0, -2)) > 854) {
+  window.addEventListener('DOMContentLoaded', () => {
+    pTag.style.animation = 'typingAnimation 3s cubic-bezier(0.6, 0, 0.4, 1) 0s 1 normal forwards running';
+  });
+}
 
 // appearance
 const cards = document.querySelectorAll(".card");
