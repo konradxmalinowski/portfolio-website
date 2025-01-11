@@ -9,6 +9,7 @@
       name="keywords"
       content="portfolio, cv, job, web-dev, web developer"
     />
+    <script src="languages.js" defer></script>
     <script src="app.js" defer></script>
     <title>Portfolio</title>
   </head>
@@ -19,6 +20,18 @@
         >portfolio-website.ct8.pl</a
       >
 
+      <section class="languages">
+        <button>
+          <img src="images/uk-flag.png" alt="uk-flag" id="switchToENButton" />
+        </button>
+        <button>
+          <img
+            src="images/pl-flagpng.png"
+            alt="pl-flag"
+            id="switchToPLButton"
+          />
+        </button>
+      </section>
       <section id="anchors">
         <nav class="anchors-left basicFlex">
           <a
@@ -29,9 +42,9 @@
           >
         </nav>
         <nav class="anchors-right basicFlex">
-          <a href="#top">About</a>
-          <a href="#web-apps">Projects</a>
-          <a href="#skills">Skills</a>
+          <a href="#top"></a>
+          <a href="#web-apps"></a>
+          <a href="#skills"></a>
         </nav>
       </section>
     </header>
@@ -40,7 +53,6 @@
       <img
         src="images/menu-bar-icon.png"
         alt="menu-bar-icon"
-        class="menu-bar-icon"
         class="menu-bar-icon"
       />
     </button>
@@ -78,27 +90,31 @@
           </section>
           <div id="text-wrapper">
             <p class="bold">
-              Hi, my name is
-              <span class="green">Konrad Malinowski</span>
+              <span></span>
+              <span class="green"></span>
             </p>
             <p>
-              I am a <span class="bold">web developer</span> with experience in
-              creating frontend and backend applications.
+              <span></span>
+              <span class="bold"></span>&nbsp;<span> </span>
             </p>
             <p>
-              I work with technologies such as <span class="bold">HTML</span>,
-              <span class="bold">CSS</span>, and
-              <span class="bold">JavaScript</span>, using the Framework -
-              <span class="bold">React</span>. I also deal with managing servers
-              and databases, which allows me to comprehensively support the
-              implemented projects.
+              <span></span>
+              <span class="bold"></span><span>,</span>&nbsp;<span
+                class="bold"
+              ></span
+              ><span></span>
+              <span class="bold"></span>
+              <span></span>
+              <span class="bold"></span>
+              <span> </span>
             </p>
             <p>
-              I am passionate about building intuitive and visually appealing
-              web applications. When I'm not coding, I enjoy exploring new
-              technologies and
-              <span class="underlined">keeping up-to-date</span> with the latest
-              trends in web development.
+              <span>
+              
+              </span>
+              <span class="underlined"></span>&nbsp;<span></span>
+      
+              </span>
             </p>
           </div>
 
@@ -127,80 +143,60 @@
     <div class="main-wrapper">
       <span id="web-apps"></span>
       <main>
-        <h1>Let's check out <span class="bold green">my projects</span></h1>
-        <p>All other interesting projects can be found on my github!</p>
+        <h1><span></span>&nbsp;<span class="bold green"></span></h1>
+        <p></p>
         <section id="projects-content">
           <section class="card">
-            <h3>Text statistics</h3>
-            <p>
-              A tool for analyzing text, providing statistics like character,
-              word, and sentence counts. The design is simple, responsive, and
-              user-friendly.
-            </p>
+            <h3></h3>
+            <p></p>
             <section class="card__items">
               <button class="card__button">
                 <a
                   href="https://portfolio-website.ct8.pl/websites/text-statistics"
                   target="_blank"
-                  >Show</a
-                >
+                  ></a>
               </button>
               <button
                 onclick="copyToClipboard('https://portfolio-website.ct8.pl/websites/text-statistics')"
                 class="card__button"
-              >
-                Copy
+              >  
               </button>
             </section>
           </section>
-
           <section class="card">
-            <h3>Converter</h3>
-            <p>
-              This is a versatile unit converter web app that supports
-              conversions across various measurement categories. It features a
-              straightforward interface, making it easy to quickly convert units
-              with accuracy.
-            </p>
+            <h3></h3>
+            <p></p>
             <section class="card__items">
               <button class="card__button">
                 <a
                   href="https://portfolio-website.ct8.pl/websites/converter"
                   target="_blank"
-                  >Show</a
+                  ></a
                 >
               </button>
-
               <button
                 onclick="copyToClipboard('https://portfolio-website.ct8.pl/websites/converter')"
                 class="card__button"
               >
-                Copy
               </button>
             </section>
           </section>
 
           <section class="card">
-            <h3>Exam test</h3>
-            <p>
-              An exam test for the INF.03 certification, focused on JavaScript,
-              jQuery, and React. It features an interactive interface with
-              automatic scoring and responsive design.
-            </p>
+            <h3></h3>
+            <p></p>
             <section class="card__items">
               <button class="card__button">
                 <a
                   href="https://portfolio-website.ct8.pl/websites/exam-test/"
                   target="_blank"
-                  >Show</a
+                  ></a
                 >
               </button>
-
               <button
                 onclick="copyToClipboard('https://portfolio-website.ct8.pl/websites/exam-test/')"
                 class="card__button"
               >
-                Copy
               </button>
             </section>
           </section>
@@ -210,7 +206,7 @@
 
     <section class="skills-wrapper">
       <section id="skills"></section>
-      <h1>My Skills</h1>
+      <h1></h1>
       <article id="skills-article">
         <section id="skills-content">
           <section class="language">
@@ -221,7 +217,7 @@
               loading="lazy"
               id="html-img"
             />
-            <span>Experienced</span>
+            <span></span>
           </section>
           <section class="language">
             <h3>CSS</h3>
@@ -231,7 +227,7 @@
               loading="lazy"
               id="css-img"
             />
-            <span>Experienced</span>
+            <span></span>
           </section>
           <section class="language">
             <h3>JavaScript</h3>
@@ -241,7 +237,7 @@
               id="js-img"
               loading="lazy"
             />
-            <span>Experienced</span>
+            <span></span>
           </section>
           <section class="language">
             <h3>React</h3>
@@ -251,7 +247,7 @@
               loading="lazy"
               id="react-img"
             />
-            <span>Basic</span>
+            <span></span>
           </section>
           <section class="language">
             <h3>Wordpress</h3>
@@ -261,7 +257,7 @@
               loading="lazy"
               id="wordpress-img"
             />
-            <span>Experienced</span>
+            <span></span>
           </section>
           <section class="language">
             <h3>SQL</h3>
@@ -271,7 +267,7 @@
               id="sql-img"
               loading="lazy"
             />
-            <span>Basic</span>
+            <span></span>
           </section>
           <section class="language">
             <h3>MySQL</h3>
@@ -281,7 +277,7 @@
               loading="lazy"
               id="mysql-img"
             />
-            <span>Basic</span>
+            <span></span>
           </section>
           <section class="language">
             <h3>Python</h3>
@@ -291,7 +287,7 @@
               id="python-img"
               loading="lazy"
             />
-            <span>Basic</span>
+            <span></span>
           </section>
           <section class="language">
             <h3>C#</h3>
@@ -301,7 +297,7 @@
               id="c-hasz-img"
               loading="lazy"
             />
-            <span>Basic</span>
+            <span></span>
           </section>
           <section class="language">
             <h3>Git</h3>
@@ -311,7 +307,7 @@
               loading="lazy"
               id="git-img"
             />
-            <span>Basic</span>
+            <span></span>
           </section>
         </section>
       </article>
@@ -319,14 +315,10 @@
 
     <section class="ratings-wrapper">
       <section class="rating-section">
-        <h1>Do you want to rate this website?</h1>
-        <p>
-          I encourage you to click the button below and share your feedback on
-          my work in creating this website.
-        </p>
+        <h1></h1>
+        <p></p>
         <button>
-          <a href="mailto:konradmalinowski@zsezdw.onmicrosoft.com"
-            >Rate website</a
+          <a href="mailto:konradmalinowski@zsezdw.onmicrosoft.com"></a
           >
         </button>
       </section>
@@ -372,8 +364,8 @@
       </section>
 
       <section class="footer-wrapper rwrapper">
-        <a href="Terms of Use.pdf" download target="_blank">Terms of Use</a>
-        <a href="">Privacy Policy</a>
+        <a href="Terms of Use.pdf" download target="_blank"></a>
+        <a href=""></a>
         <p>Konrad Malinowski &copy;<span class="date"></span></p>
       </section>
     </footer>

@@ -20,9 +20,8 @@ function toggleClass() {
   }
 
 }
-navbarButton.onclick = toggleClass;
-navbarButton.onblur = toggleClass;
 
+navbarButton.onclick = toggleClass;
 
 // author animation
 const pTag = document.querySelector('#text-wrapper>p:nth-child(1)');
@@ -82,7 +81,14 @@ function showMessage(content) {
 
 window.copyToClipboard = (content) => {
   navigator.clipboard.writeText(content);
-  showMessage("Copied!");
+  let messageValue;
+  if (language.includes('pl')) {
+    messageValue = 'Skopiowano!';
+  }
+  else {
+    messageValue = 'Copied!';
+  }
+  showMessage(messageValue);
 };
 
 

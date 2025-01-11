@@ -115,7 +115,7 @@ header {
 }
 
 .anchors-right {
-  width: 50%;
+  width: 43%;
   height: 100%;
   justify-content: center;
   gap: 100px;
@@ -161,9 +161,29 @@ header .domain-name {
 }
 
 
+.languages {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  transform: translateY(-50%);
+  position: absolute;
+  left: 10px;
+  top: 35px;
+}
+
+.languages img {
+  width: 28px;
+}
+
+.languages button {
+  background-color: transparent;
+  border: none;
+}
+
+
 /* header for phones */
 
-@media (max-width: 550px) {
+@media (max-width: 930px) {
   header .domain-name {
     display: block;
     margin-right: 10px;
@@ -221,7 +241,7 @@ header .domain-name {
 }
 
 
-@media (min-width: 550px) {
+@media (min-width: 930px) {
   .navbar-button {
     display: none;
   }
@@ -265,29 +285,6 @@ header .domain-name {
   height: 100%;
   width: calc(100% - 100px);
 }
-
-
-@media (width > 854px) {
-  #text-wrapper>p:nth-child(1) {
-    position: relative;
-    width: 2px;
-    text-wrap: nowrap;
-    overflow: hidden;
-
-    &::after {
-      content: '';
-      width: 1px;
-      height: 80%;
-      background-color: var(--clr-secondary-300);
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translateY(14%);
-      opacity: 1;
-    }
-  }
-}
-
 
 
 #text-wrapper>p {
@@ -358,6 +355,27 @@ header .domain-name {
   }
 }
 
+@media (width > 850px) {
+  #text-wrapper>p:nth-child(1) {
+    position: relative;
+    width: 2px;
+    text-wrap: nowrap;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      width: 1px;
+      height: 80%;
+      background-color: var(--clr-secondary-300);
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateY(14%);
+      opacity: 1;
+    }
+  }
+}
+
 @media (max-width: 850px) {
   .hero-section {
     height: auto;
@@ -396,6 +414,7 @@ header .domain-name {
     justify-content: center;
     align-items: center;
   }
+
 }
 
 
@@ -527,7 +546,7 @@ main>h1 {
 }
 
 .message {
-  width: 120px;
+  width: 140px;
   height: 80px;
   position: fixed;
   border: 1px solid var(--clr-accent-400);
@@ -922,18 +941,7 @@ footer :is(a, p) {
   }
 
   to {
-    width: 480px;
+    width: 560px;
     padding-right: 10px;
-  }
-}
-
-
-@keyframes hideCursor {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
   }
 }
