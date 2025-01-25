@@ -1,4 +1,3 @@
-// navbar
 const navbar = document.querySelector('.navbar');
 const navbarButton = document.querySelector('.navbar-button');
 
@@ -13,9 +12,13 @@ function toggleClass() {
     isClass = (navbar.classList.contains('showed-hidden-navbar')) ? true : false;
   }, 0)
 
+  setTimeout(() => {
+    navbar.style.display = (isClass) ? 'block' : 'none';
+  }, 1000);
+
   if (isClass) {
     setTimeout(() => {
-      navbar.style.visibility = 'hidden'
+      navbar.style.display = 'none';
     }, 700);
   }
 

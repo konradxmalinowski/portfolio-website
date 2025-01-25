@@ -1,68 +1,61 @@
 {
-    "header": {
-      "anchors": {
-        "right": ["About", "Projects", "Skills"]
-      }
-    },
-    "heroSection": {
-        "author": [
-          "Hi, my name is",
-          "Konrad Malinowski",
-          "I am a",
-          "web developer",
-          "with experience in creating frontend and backend applications.",
-          "I work with technologies such as",
-          "HTML",
-          ",",
-          "CSS",
-          ", and",
-          "JavaScript",
-          ", using the Library -",
-          "React. ",
-          "I also deal with managing servers and databases, which allows me to comprehensively support the implemented projects.",
-          "I am passionate about building intuitive and visually appealing web applications. When I'm not coding, I enjoy exploring new technologies and",
-          "keeping up-to-date",
-          "with the latest trends in web development."
-        ]
-    },
-    "projects": [
-      [
-        "Let's check out",
-        "my projects",
-       "All other interesting projects can be found on my github!"
-   ],
-
-   [
-       "Show",
-       "Copy"
-   ],
-      {
-        "title": "Text statistics",
-        "description": "A tool for analyzing text, providing statistics like character, word, and sentence counts."
-      },
-      {
-        "title": "Converter",
-        "description": "A versatile unit converter web app supporting various measurement categories."
-      },
-      {
-        "title": "Exam test",
-        "description": "An exam test for the INF.03 certification focused on JavaScript, jQuery, and React."
-      }
-    ],
-
-    "skillsHeading": "My skills",
-    "skills": [
-     "Experienced",
-     "Basics"
-    ],
-    "ratings": {
-      "prompt": "Do you want to rate this website?",
-      "content": "I encourage you to click the button below and share your feedback on my work in creating this website.",
-      "buttonText": "Rate website"
-    },
-    "footer": {
-        "terms": "Terms of Use",
-        "privacy": "Privacy Policy"
+  "header": {
+    "anchors": {
+      "right": ["About", "Projects", "Skills"]
     }
+  },
+  "heroSection": {
+    "author": [
+      "Hi, my name is",
+      "Konrad Malinowski",
+      "I am a",
+      "web developer",
+      "with experience in creating frontend and backend applications.",
+      "I work with technologies such as",
+      "HTML",
+      ",",
+      "CSS",
+      ", and",
+      "JavaScript",
+      ", using the Library -",
+      "React. ",
+      "I also deal with managing servers and databases, which allows me to comprehensively support the implemented projects.",
+      "I am passionate about building intuitive and visually appealing web applications. When I'm not coding, I enjoy exploring new technologies and",
+      "keeping up-to-date",
+      "with the latest trends in web development."
+    ]
+  },
+  "projects": [
+    [
+      "Let's check out",
+      "my projects",
+      "All other interesting projects can be found on my github!"
+    ],
+
+    ["Show", "Copy"],
+    {
+      "title": "Text statistics",
+      "description": "A tool for analyzing text, providing statistics like character, word, and sentence counts."
+    },
+    {
+      "title": "Converter",
+      "description": "A versatile unit converter web app supporting various measurement categories."
+    },
+    {
+      "title": "Exam test",
+      "description": "An exam test for the INF.03 certification focused on JavaScript, jQuery, and React."
+    }
+  ],
+
+  "skillsHeading": "My skills",
+  "skills": ["Experienced", "Basics"],
+  "ratings": {
+    "prompt": "Do you want to rate this website?",
+    "content": "I encourage you to click the button below and share your feedback on my work in creating this website.",
+    "buttonText": "Rate website"
+  },
+  "footer": {
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy"
   }
-  
+}

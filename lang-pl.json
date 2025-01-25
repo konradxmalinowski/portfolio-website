@@ -1,66 +1,59 @@
 {
-    "header": {
-      "anchors": {
-        "right": ["O mnie", "Projekty", "Umiejętności"]
-      }
-    },
-    "heroSection": {
-      "author": [
-        "Cześć, nazywam się",
-        "Konrad Malinowski",
-        "Jestem",
-        "web developerem",
-        "z doświadczeniem w tworzeniu aplikacji frontendowych i backendowych.",
-        "Pracuję z technologiami takimi jak",
-        "HTML",
-        ",",
-        "CSS",
-        ", oraz",
-        "JavaScript",
-        ", używając biblioteki -",
-        "React. ",
-        "Zajmuję się także zarządzaniem serwerami i bazami danych, co pozwala mi kompleksowo wspierać realizowane projekty.",
-        "Pasjonuję się tworzeniem intuicyjnych i atrakcyjnych wizualnie aplikacji internetowych. Kiedy nie piszę kodu, lubię odkrywać nowe technologie i",
-        "śledzić najnowsze",
-        "trendy w rozwoju stron internetowych."
-      ]
-    },
-    "projects": [
-      [
-        "Sprawdź",
-        "moje projekty",
-        "Wszystkie inne ciekawe projekty znajdziesz na moim GitHubie!"
-      ],
-      [
-        "Pokaż",
-        "Skopiuj"
-      ],
-      {
-        "title": "Statystyki tekstu",
-        "description": "Narzędzie do analizy tekstu, dostarczające statystyki, takie jak liczba znaków, słów i zdań."
-      },
-      {
-        "title": "Konwerter",
-        "description": "Wszechstronna aplikacja webowa do konwersji jednostek, wspierająca różne kategorie miar."
-      },
-      {
-        "title": "Test egzaminacyjny",
-        "description": "Test egzaminacyjny do certyfikatu INF.03, skupiający się na JavaScript, jQuery i React."
-      }
-    ],
-    "skillsHeading": "Moje umiejętności",
-    "skills": [
-      "Doświadczony",
-      "Podstawowy"
-    ],
-    "ratings": {
-      "prompt": "Chciałbyś ocenić tę stronę?",
-      "content": "Zachęcam do kliknięcia w przycisk poniżej i podzielenia się swoją opinią na temat mojej pracy przy tworzeniu tej strony.",
-      "buttonText": "Oceń stronę"
-    },
-    "footer": {
-        "terms": "Warunki korzystania",
-        "privacy": "Polityka prywatności"
+  "header": {
+    "anchors": {
+      "right": ["O mnie", "Projekty", "Umiejętności"]
     }
+  },
+  "heroSection": {
+    "author": [
+      "Cześć, nazywam się",
+      "Konrad Malinowski",
+      "Jestem",
+      "web developerem",
+      "z doświadczeniem w tworzeniu aplikacji frontendowych i backendowych.",
+      "Pracuję z technologiami takimi jak",
+      "HTML",
+      ",",
+      "CSS",
+      ", oraz",
+      "JavaScript",
+      ", używając biblioteki -",
+      "React. ",
+      "Zajmuję się także zarządzaniem serwerami i bazami danych, co pozwala mi kompleksowo wspierać realizowane projekty.",
+      "Pasjonuję się tworzeniem intuicyjnych i atrakcyjnych wizualnie aplikacji internetowych. Kiedy nie piszę kodu, lubię odkrywać nowe technologie i",
+      "śledzić najnowsze",
+      "trendy w rozwoju stron internetowych."
+    ]
+  },
+  "projects": [
+    [
+      "Sprawdź",
+      "moje projekty",
+      "Wszystkie inne ciekawe projekty znajdziesz na moim GitHubie!"
+    ],
+    ["Pokaż", "Skopiuj"],
+    {
+      "title": "Statystyki tekstu",
+      "description": "Narzędzie do analizy tekstu, dostarczające statystyki, takie jak liczba znaków, słów i zdań."
+    },
+    {
+      "title": "Konwerter",
+      "description": "Wszechstronna aplikacja webowa do konwersji jednostek, wspierająca różne kategorie miar."
+    },
+    {
+      "title": "Test egzaminacyjny",
+      "description": "Test egzaminacyjny do certyfikatu INF.03, skupiający się na JavaScript, jQuery i React."
+    }
+  ],
+  "skillsHeading": "Moje umiejętności",
+  "skills": ["Doświadczony", "Podstawowy"],
+  "ratings": {
+    "prompt": "Chciałbyś ocenić tę stronę?",
+    "content": "Zachęcam do kliknięcia w przycisk poniżej i podzielenia się swoją opinią na temat mojej pracy przy tworzeniu tej strony.",
+    "buttonText": "Oceń stronę"
+  },
+  "footer": {
+    "terms": "Warunki korzystania",
+    "privacy": "Polityka prywatności"
   }
-  
+}
