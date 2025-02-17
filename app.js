@@ -1,70 +1,105 @@
-const navbar = document.querySelector('.navbar');
-const navbarButton = document.querySelector('.navbar-button');
+// menu
+const navbarMenu = document.querySelectorAll('.navbar');
+const navbarButtons = document.querySelectorAll('.navbar-button');
+
+function hideNavbar() {
+  navbarMenu.forEach((navbar) => {
+    navbar.classList.add('hidden-navbar');
+    navbar.style.display = 'none';
+  });
+}
+
+window.addEventListener('resize', () => {
+  hideNavbar();
+});
+
+hideNavbar();
 
 function toggleClass() {
-  setTimeout(() => {
-    navbar.classList.toggle('showed-hidden-navbar');
-  }, 0);
+  navbarMenu.forEach((navbar) => {
+    let isClass = navbar.classList.contains('shown-navbar');
 
-  let isClass;
+    if (isClass) {
+      setTimeout(() => {
+        navbar.classList.add('hidden-navbar');
+        navbar.classList.remove('shown-navbar');
+      }, 0);
 
-  setTimeout(() => {
-    isClass = (navbar.classList.contains('showed-hidden-navbar')) ? true : false;
-  }, 0)
+      setTimeout(() => {
+        navbar.style.display = 'none';
+      }, 750);
+    } else {
+      setTimeout(() => {
+        navbar.classList.add('shown-navbar');
+        navbar.classList.remove('hidden-navbar');
+      }, 0);
 
-  setTimeout(() => {
-    navbar.style.display = (isClass) ? 'block' : 'none';
-  }, 1000);
+      setTimeout(() => {
+        navbar.style.display = 'block';
+      }, 750);
+    }
+  });
+}
 
-  if (isClass) {
-    setTimeout(() => {
-      navbar.style.display = 'none';
-    }, 700);
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+// change language
+const langSets = document.querySelectorAll('.lang-set');
+const langlistMenu = document.querySelectorAll('.lang-list');
+const arrowDown = document.querySelector('img[alt="arrow-down"]');
+const langlist = document.querySelectorAll('.lang-list span');
+
+function toggleLang() {
+  langlistMenu.forEach((langlist) => {
+    if (window.getComputedStyle(langlist).display === 'none') {
+      langlist.style.display = 'block';
+    } else {
+      langlist.style.display = 'none';
+    }
+  });
+
+  if (window.getComputedStyle(arrowDown).rotate === '0deg') {
+    arrowDown.style.animation = 'rotate1 .5s ease-in-out 0s normal forwards';
   }
 
+  if (window.getComputedStyle(arrowDown).rotate === '180deg') {
+    arrowDown.style.animation = 'rotate2 .5s ease-in-out 0s normal forwards';
+  }
 }
 
-navbarButton.onclick = toggleClass;
+// change language switch
+langSets.forEach((langSet) => {
+  langSet.onclick = toggleLang;
+});
 
-// author animation
-const pTag = document.querySelector('#text-wrapper>p:nth-child(1)');
+navbarButtons.forEach((navbarButton) => {
+  navbarButton.onclick = toggleClass;
+});
 
-if (parseInt(window.getComputedStyle(document.body).width.slice(0, -2)) > 854) {
-  window.addEventListener('DOMContentLoaded', () => {
-    pTag.style.animation = 'typingAnimation 3s cubic-bezier(0.6, 0, 0.4, 1) 0s 1 normal forwards running';
-  });
-}
-
-// appearance
-const cards = document.querySelectorAll(".card");
-const languages = document.querySelectorAll(".language");
-
-cards.forEach((card, idx) => {
-  card.addEventListener("mouseover", () => {
-    cards[idx].style.animation =
-      "move .4s ease-in-out 0s forwards normal running";
-  });
-
-  card.addEventListener("mouseout", () => {
-    cards[idx].style.animation =
-      "comeBack .4s ease-in-out 0s forwards normal running";
-  });
+langlist.forEach((lang, idx) => {
+  lang.onclick = () => {
+    changeLanguage(idx);
+  }
 });
 
 
-languages.forEach((lan) => {
-  lan.addEventListener("mouseover", () => {
-    lan.style.animation = "zoomInLanguage .3s ease-in-out 1 normal forwards";
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+// copy to clipboard
+const links = [
+  'https://portfolio-website.ct8.pl/websites/text-statistics',
+  'https://portfolio-website.ct8.pl/websites/converter',
+  'https://portfolio-website.ct8.pl/websites/exam-test/'
+];
+const copyButtons = document.querySelectorAll('.card__items .card__button:nth-of-type(2)');
+console.log(copyButtons);
+
+function handleCopyButtonClick() {
+  document.addEventListener('click', (event) => {
+    let index = [...copyButtons].indexOf(event.target);
+    if (index != -1) {
+      copyLink(links[index]);
+    }
   });
-
-  lan.addEventListener("mouseout", () => {
-    lan.style.animation = "zoomOutLanguage .3s ease-in-out 1 normal forwards";
-  });
-});
-
-
-
-// copy button in .card
+}
 
 function showMessage(content) {
   let message = document.createElement("section");
@@ -82,19 +117,18 @@ function showMessage(content) {
   }, 2000);
 }
 
-window.copyToClipboard = (content) => {
-  navigator.clipboard.writeText(content);
-  let messageValue;
-  if (language.includes('pl')) {
-    messageValue = 'Skopiowano!';
+function copyLink(link) {
+  navigator.clipboard.writeText(link);
+  let messageValue = 'Copied!';
+
+  if (browserDefaultLanguage.includes('pl')) {
+    messageValue = 'Skopiowano';
   }
-  else {
-    messageValue = 'Copied!';
-  }
+
   showMessage(messageValue);
-};
+}
 
+handleCopyButtonClick();
 
-
-// date in  footer
+// date in footer
 document.querySelector(".date").textContent = new Date().getFullYear();

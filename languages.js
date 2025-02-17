@@ -1,88 +1,130 @@
-const anchors = document.querySelectorAll('.anchors-right a');
-const spans = document.querySelectorAll('#text-wrapper p span');
-const projectTitles = document.querySelectorAll('main h1 span, main p');
-const cardHeadings = document.querySelectorAll('.card h3');
-const cardDescriptions = document.querySelectorAll('.card p');
-const showButtons = document.querySelectorAll('.card button > a');
-const copyButtons = document.querySelectorAll('.card button:nth-last-child(1)');
-const skillsHeading = document.querySelector('.skills-wrapper > h1');
-const experienceLevels = document.querySelectorAll('.language span');
-const ratings = document.querySelectorAll('.rating-section h1, .rating-section p, .rating-section button a');
-const footerLinks = document.querySelectorAll('.rwrapper a');
+/* eslint-disable no-unused-vars */
+let browserDefaultLanguage = navigator.language;
 
-async function fetchLanguages(lang) {
-    try {
-        const response = await fetch(`lang-${lang}.json`);
-        if (!response.ok) throw new Error('Error while fetching data');
+function fillData(content) {
+    const anchors = document.querySelectorAll('.anchors-right a');
+    const anchorsNavbar = document.querySelectorAll('.navbar a');
+    const spans = document.querySelectorAll('#text-wrapper p span');
+    const projectTitles = document.querySelectorAll('main h1 span, main p');
+    const cardHeadings = document.querySelectorAll('.card h3');
+    const cardDescriptions = document.querySelectorAll('.card p');
+    const showButtons = document.querySelectorAll('.card button > a');
+    const copyButtons = document.querySelectorAll('.card button:nth-last-child(1)');
+    const skillsHeading = document.querySelector('.skills-wrapper > h1');
+    const experienceLevels = document.querySelectorAll('.language span');
+    const ratings = document.querySelectorAll('.rating-section h1, .rating-section p, .rating-section button a');
+    const footerLinks = document.querySelectorAll('.rwrapper a');
 
-        const content = await response.json();
-        anchors.forEach((anchor, index) => {
-            anchor.textContent = content.header.anchors.right[index];
-        });
+    anchors.forEach((anchor, index) => {
+        anchor.textContent = content.header.anchors.right[index];
+    });
 
-        spans.forEach((span, index) => {
-            if (index < content.heroSection.author.length) {
-                span.textContent = content.heroSection.author[index];
-            }
-        });
+    anchorsNavbar.forEach((anchor, index) => {
+        anchor.textContent = content.header.anchors.right[index];
+    });
 
-        projectTitles[0].textContent = content.projects[0][0];
-        projectTitles[1].textContent = content.projects[0][1];
-        projectTitles[2].textContent = content.projects[0][2];
+    spans.forEach((span, index) => {
+        if (index < content.heroSection.author.length) {
+            span.textContent = content.heroSection.author[index];
+        }
+    });
 
-        cardHeadings.forEach((heading, index) => {
-            heading.textContent = content.projects[index + 2].title;
-        });
+    projectTitles[0].textContent = content.projects[0][0];
+    projectTitles[1].textContent = content.projects[0][1];
+    projectTitles[2].textContent = content.projects[0][2];
 
-        cardDescriptions.forEach((description, index) => {
-            description.textContent = content.projects[index + 2].description;
-        });
+    cardHeadings.forEach((heading, index) => {
+        heading.textContent = content.projects[index + 2].title;
+    });
 
-        showButtons.forEach(button => {
-            button.textContent = content.projects[1][0];
-        });
+    cardDescriptions.forEach((description, index) => {
+        description.textContent = content.projects[index + 2].description;
+    });
 
-        copyButtons.forEach(button => {
-            button.textContent = content.projects[1][1];
-        });
+    showButtons.forEach(button => {
+        button.textContent = content.projects[1][0];
+    });
 
-        skillsHeading.textContent = content.skillsHeading;
+    copyButtons.forEach(button => {
+        button.textContent = content.projects[1][1];
+    });
 
-        experienceLevels.forEach((level, index) => {
-            level.textContent = content.skills[index < 5 ? 0 : 1];
-        });
+    skillsHeading.textContent = content.skillsHeading;
 
-        ratings[0].textContent = content.ratings.prompt;
-        ratings[1].textContent = content.ratings.content;
-        ratings[2].textContent = content.ratings.buttonText;
+    experienceLevels.forEach((level, index) => {
+        level.textContent = content.skills[index < 5 ? 0 : 1];
+    });
 
-        footerLinks[0].textContent = content.footer.terms;
-        footerLinks[1].textContent = content.footer.privacy;
+    ratings[0].textContent = content.ratings.prompt;
+    ratings[1].textContent = content.ratings.content;
+    ratings[2].textContent = content.ratings.buttonText;
 
-        console.clear();
+    footerLinks[0].textContent = content.footer.terms;
+    footerLinks[1].textContent = content.footer.privacy;
+}
 
-    } catch (error) {
-        console.error(error);
+async function fetchLanguage(lang) {
+    const response = await fetch(`lang-${lang}.json`);
+    if (!response.ok) {
+        throw new Error('Error while fetching data');
+    }
+
+    const data = await response.json();
+    fillData(data);
+}
+
+function changeFlag() {
+    const langImage = document.querySelector('.lang-set img');
+    if (browserDefaultLanguage.includes('pl')) {
+        langImage.setAttribute('src', 'images/poland.png');
+        return;
+    }
+
+    langImage.setAttribute('src', 'images/english.png');
+}
+
+function changeHTMLAttribute() {
+    if (browserDefaultLanguage.includes('pl')) {
+        document.querySelector('html').setAttribute('lang', 'pl');
+        return;
+    }
+
+    document.querySelector('html').setAttribute('lang', 'en');
+}
+
+function changeLanguage(idx) {
+    if (idx === 0) {
+        if (browserDefaultLanguage.includes('pl')) {
+            return;
+        }
+
+        browserDefaultLanguage = 'pl';
+        fetchLanguage('pl');
+        changeFlag();
+        changeHTMLAttribute();
+
+    }
+    if (idx === 1) {
+        if (browserDefaultLanguage.includes('en')) {
+            return;
+        }
+
+        browserDefaultLanguage = 'en';
+        fetchLanguage('en');
+        changeFlag();
+        changeHTMLAttribute();
     }
 }
 
-let language;
+function loadDefaultLanguage() {
+    if (browserDefaultLanguage.includes('pl')) {
+        fetchLanguage('pl');
+        return;
+    }
 
-window.addEventListener('DOMContentLoaded', async () => {
-    const browserLang = navigator.language.includes('pl') ? 'pl' : 'en';
-    await fetchLanguages(browserLang);
-    language = browserLang;
-});
+    fetchLanguage('en');
+}
 
-const switchToENButton = document.querySelector('#switchToENButton');
-const switchToPLButton = document.querySelector('#switchToPLButton');
-
-switchToENButton.onclick = async () => {
-    await fetchLanguages('en');
-    language = 'en';
-};
-
-switchToPLButton.onclick = async () => {
-    await fetchLanguages('pl');
-    language = 'pl';
-};
+loadDefaultLanguage();
+changeHTMLAttribute();
+changeFlag();

@@ -9,58 +9,79 @@
       name="keywords"
       content="portfolio, cv, job, web-dev, web developer"
     />
-    <script src="languages.js" defer></script>
     <script src="app.js" defer></script>
+    <script src="languages.js" defer></script>
     <title>Portfolio</title>
   </head>
 
   <body>
     <header>
-      <a href="http://www.portfolio-website.ct8.pl" class="domain-name bold"
-        >portfolio-website.ct8.pl</a
-      >
+      <div class="anchors-left">
+        <div class="lang-set">
+          <img src="images/poland.png" alt="Polish flag" loading="lazy" />
+          <img src="images/arrow-down.png" alt="arrow-down" loading="lazy" />
+          <div class="lang-list">
+            <div>
+              <img src="images/poland.png" alt="PL flag" loading="lazy" />
+              <span>Polish</span>
+            </div>
+            <div>
+              <img src="images/english.png" alt="EN flag" loading="lazy" />
+              <span>English</span>
+            </div>
+          </div>
+        </div>
 
-      <section class="languages">
-        <button>
-          <img src="images/uk-flag.png" alt="uk-flag" id="switchToENButton" />
-        </button>
-        <button>
-          <img
-            src="images/pl-flagpng.png"
-            alt="pl-flag"
-            id="switchToPLButton"
-          />
-        </button>
-      </section>
-      <section id="anchors">
-        <nav class="anchors-left basicFlex">
-          <a
-            href="http://www.portfolio-website.ct8.pl"
-            target="_blank"
-            class="bold"
+        <span class="domain-name"
+          ><a href="https://www.portfolio-website.ct8.pl" target="_blank"
             >portfolio-website.ct8.pl</a
-          >
-        </nav>
-        <nav class="anchors-right basicFlex">
-          <a href="#top"></a>
-          <a href="#web-apps"></a>
-          <a href="#skills"></a>
-        </nav>
-      </section>
-    </header>
+          ></span
+        >
+      </div>
+      <nav class="anchors-right">
+        <a href="#top"></a>
+        <a href="#web-apps"></a>
+        <a href="#skills"></a>
+      </nav>
 
-    <button class="navbar-button">
-      <img
-        src="images/menu-bar-icon.png"
-        alt="menu-bar-icon"
-        class="menu-bar-icon"
-      />
-    </button>
-    <nav class="navbar">
-      <a href="#top">About</a>
-      <a href="#web-apps">Projects</a>
-      <a href="#skills">Skills</a>
-    </nav>
+      <button class="navbar-button" aria-label="Toggle navigation menu">
+        <img
+          src="images/menu-bar-icon.png"
+          alt="Menu bar icon"
+          class="menu-bar-icon"
+          loading="lazy"
+        />
+      </button>
+
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a href="../Home Page/index.html" target="_blank"></a>
+            <img
+              src="images/arrow-right.png"
+              alt="Arrow right"
+              loading="lazy"
+            />
+          </li>
+          <li>
+            <a href="../Partners/partners.html" target="_blank"></a>
+            <img
+              src="images/arrow-right.png"
+              alt="Arrow right"
+              loading="lazy"
+            />
+          </li>
+          <li>
+            <a href="../About/index.html" target="_blank"></a>
+            <img
+              src="images/arrow-right.png"
+              alt="Arrow right"
+              loading="lazy"
+            />
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <section class="hero-section">
       <section id="author">
@@ -109,12 +130,8 @@
               <span> </span>
             </p>
             <p>
-              <span>
-              
-              </span>
+              <span> </span>
               <span class="underlined"></span>&nbsp;<span></span>
-      
-              </span>
             </p>
           </div>
 
@@ -154,13 +171,9 @@
                 <a
                   href="https://portfolio-website.ct8.pl/websites/text-statistics"
                   target="_blank"
-                  ></a>
+                ></a>
               </button>
-              <button
-                onclick="copyToClipboard('https://portfolio-website.ct8.pl/websites/text-statistics')"
-                class="card__button"
-              >  
-              </button>
+              <button class="card__button"></button>
             </section>
           </section>
           <section class="card">
@@ -171,14 +184,9 @@
                 <a
                   href="https://portfolio-website.ct8.pl/websites/converter"
                   target="_blank"
-                  ></a
-                >
+                ></a>
               </button>
-              <button
-                onclick="copyToClipboard('https://portfolio-website.ct8.pl/websites/converter')"
-                class="card__button"
-              >
-              </button>
+              <button class="card__button"></button>
             </section>
           </section>
 
@@ -190,14 +198,9 @@
                 <a
                   href="https://portfolio-website.ct8.pl/websites/exam-test/"
                   target="_blank"
-                  ></a
-                >
+                ></a>
               </button>
-              <button
-                onclick="copyToClipboard('https://portfolio-website.ct8.pl/websites/exam-test/')"
-                class="card__button"
-              >
-              </button>
+              <button class="card__button"></button>
             </section>
           </section>
         </section>
@@ -318,8 +321,7 @@
         <h1></h1>
         <p></p>
         <button>
-          <a href="mailto:konradmalinowski@zsezdw.onmicrosoft.com"></a
-          >
+          <a href="mailto:konradmalinowski@zsezdw.onmicrosoft.com"></a>
         </button>
       </section>
     </section>
