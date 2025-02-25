@@ -33,12 +33,12 @@
     ],
     ["Pokaż", "Skopiuj"],
     {
-      "title": "Statystyki tekstu",
-      "description": "Narzędzie do analizy tekstu, dostarczające statystyki, takie jak liczba znaków, słów i zdań."
+      "title": "Sklep",
+      "description": "Nowoczesna strona e-commerce z łatwą nawigacją, produktami i płynny procesem zakupu."
     },
     {
-      "title": "Konwerter",
-      "description": "Wszechstronna aplikacja webowa do konwersji jednostek, wspierająca różne kategorie miar."
+      "title": "Strona to do",
+      "description": "Minimalistyczna aplikacja do tworzenia, zarządzania i priorytetyzowania zadań."
     },
     {
       "title": "Test egzaminacyjny",

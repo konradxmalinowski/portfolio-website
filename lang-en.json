@@ -34,15 +34,15 @@
 
     ["Show", "Copy"],
     {
-      "title": "Text statistics",
-      "description": "A tool for analyzing text, providing statistics like character, word, and sentence counts."
+      "title": "Shop",
+      "description": "A modern e-commerce site with easy navigation, product listings, and a smooth checkout process."
     },
     {
-      "title": "Converter",
-      "description": "A versatile unit converter web app supporting various measurement categories."
+      "title": "To do list",
+      "description": "A minimalist to-do list app for creating, managing, and prioritizing tasks."
     },
     {
-      "title": "Exam test",
+      "title": "Exam",
       "description": "An exam test for the INF.03 certification focused on JavaScript, jQuery, and React."
     }
   ],
