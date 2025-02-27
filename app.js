@@ -27,7 +27,7 @@ function toggleClass() {
 
       setTimeout(() => {
         navbar.style.display = 'none';
-      }, 750);
+      }, 200);
     } else {
       setTimeout(() => {
         navbar.classList.add('shown-navbar');
@@ -36,7 +36,7 @@ function toggleClass() {
 
       setTimeout(() => {
         navbar.style.display = 'block';
-      }, 750);
+      }, 300);
     }
   });
 }
@@ -78,18 +78,19 @@ navbarButtons.forEach((navbarButton) => {
 langlist.forEach((lang, idx) => {
   lang.onclick = () => {
     changeLanguage(idx);
-  }
+  };
 });
-
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 // copy to clipboard
 const links = [
   'https://portfolio-website.ct8.pl/websites/text-statistics',
   'https://portfolio-website.ct8.pl/websites/converter',
-  'https://portfolio-website.ct8.pl/websites/exam-test/'
+  'https://portfolio-website.ct8.pl/websites/exam-test/',
 ];
-const copyButtons = document.querySelectorAll('.card__items .card__button:nth-of-type(2)');
+const copyButtons = document.querySelectorAll(
+  '.card__items .card__button:nth-of-type(2)'
+);
 console.log(copyButtons);
 
 function handleCopyButtonClick() {
@@ -102,15 +103,15 @@ function handleCopyButtonClick() {
 }
 
 function showMessage(content) {
-  let message = document.createElement("section");
-  message.setAttribute("class", "message");
+  let message = document.createElement('section');
+  message.setAttribute('class', 'message');
   message.textContent = content;
   document.body.appendChild(message);
   setTimeout(() => {
-    message.style.animation = "show .4s ease-in-out 0s normal forwards";
+    message.style.animation = 'show .4s ease-in-out 0s normal forwards';
   }, 0);
   setTimeout(() => {
-    message.style.animation = "hide .4s ease-in-out 0s normal forwards";
+    message.style.animation = 'hide .4s ease-in-out 0s normal forwards';
   }, 1000);
   setTimeout(() => {
     document.body.removeChild(message);
@@ -131,4 +132,4 @@ function copyLink(link) {
 handleCopyButtonClick();
 
 // date in footer
-document.querySelector(".date").textContent = new Date().getFullYear();
+document.querySelector('.date').textContent = new Date().getFullYear();
